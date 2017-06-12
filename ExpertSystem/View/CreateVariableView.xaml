@@ -1,0 +1,84 @@
+﻿<Window
+    x:Class="ExpertSystem.View.CreateVariableView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Create_Variable"
+    Width="300"
+    Height="303"
+    ResizeMode="NoResize">
+    <StackPanel>
+
+        <GroupBox Height="100" Header="Define Linguistic Variable">
+            <TextBlock
+                Margin="5"
+                Text="The Linguistic Variables Wizard will help you to create a linguistic variable with an initial set of terms and membership functions. In this step you specify name, color and type of the variable."
+                TextAlignment="Justify"
+                TextWrapping="Wrap" />
+        </GroupBox>
+
+        <StackPanel Orientation="Horizontal">
+            <TextBlock
+                Margin="10,2,2,2"
+                Padding="5"
+                Background="#E0EEEE"
+                Text="Name: " />
+            <TextBox
+                Name="textBox_NameVar"
+                Width="226"
+                Margin="2,2,10,3"
+                Padding="3"
+                HorizontalAlignment="Right"
+                Background="#E0EEEE" />
+        </StackPanel>
+
+        <GroupBox
+            Grid.Column="0"
+            Margin="5,0"
+            Header="Type">
+            <StackPanel>
+                <RadioButton
+                    Name="Input"
+                    Margin="5"
+                    Checked="OnRadioBtnTypeChecked"
+                    Content="Input Interface"
+                    IsChecked="True" />
+                <RadioButton
+                    Name="Output"
+                    Margin="5"
+                    Checked="OnRadioBtnTypeChecked"
+                    Content="Output Interface" />
+                <RadioButton
+                    Name="Intermediate"
+                    Margin="5"
+                    Checked="OnRadioBtnTypeChecked"
+                    Content="Intermediate" />
+            </StackPanel>
+        </GroupBox>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Grid.Column="0"
+                Margin="5"
+                Content="Previous"
+                IsEnabled="False" />
+            <Button
+                Grid.Column="1"
+                Margin="5"
+                Click="OnNextBtnClick"
+                Content="Next" />
+            <Button
+                Grid.Column="2"
+                Margin="5"
+                Click="OnCancelBtnClick"
+                Content="Cancel" />
+        </Grid>
+
+    </StackPanel>
+</Window>
