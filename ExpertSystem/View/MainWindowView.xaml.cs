@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ExpertSystem.Model;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,19 +20,29 @@ namespace ExpertSystem.View
 {
     public partial class MainWindowView : Window
     {
+        public static ObservableCollection<FuzzyVariable> VariableCollection = new ObservableCollection<FuzzyVariable>();
+
+        public static Point LastMouseClick {get; private set;};
+
         public MainWindowView()
         {
             InitializeComponent();
         }
 
-
-
         private void OnCreateNewVariableClick(object sender, RoutedEventArgs e)
         {
             CreateVariableView cvv = new CreateVariableView();
-            cvv.ShowDialog();
+            cvv.ShowDialog();           
+        }
 
-            Console.WriteLine("name: " + CreateVariableView.NameVar);
+        private void canvas_drawing_MouseRightButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            LastMouseClick = Mouse.GetPosition(canvas_drawing);
+        }
+
+        public static Canvas GetMainCanvas()
+        {
+
         }
 
         

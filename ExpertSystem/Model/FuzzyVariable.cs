@@ -21,12 +21,36 @@ namespace ExpertSystem.Model
         private float _min;
         private float _max;
 
-        public string Name { get; set; }
-        public VariableType Type { get; set; }
-        public List<Term> TermsList { get; set; }
-        public string Comment { get; set; }
-        public float Min { get; set; }
-        public float Max { get; set; }
+        public string Name
+        {
+            get { return _name; }
+            set { _name = value; }
+        }
+        public VariableType Type
+        {
+            get { return _type; }
+            set { _type = value; }
+        }
+        public List<Term> TermsList
+        {
+            get { return _termsList; }
+            set { _termsList = value; }
+        }
+        public string Comment
+        {
+            get { return _comment; }
+            set { _comment = value; }
+        }
+        public float Min
+        {
+            get { return _min; }
+            set { _min = value; }
+        }
+        public float Max
+        {
+            get { return _max; }
+            set { _max = value; }
+        }
 
         public FuzzyVariable() { }
 

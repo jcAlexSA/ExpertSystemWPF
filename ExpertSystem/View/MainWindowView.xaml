@@ -69,7 +69,10 @@
             Margin="5"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"
-            Background="#F8F8FF">
+            Background="#F8F8FF"
+            MouseRightButtonDown="canvas_drawing_MouseRightButtonDown">
+
+
 
             <Canvas.ContextMenu>
                 <ContextMenu>

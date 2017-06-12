@@ -52,5 +52,11 @@ namespace ExpertSystem.View
             Console.WriteLine("TYPE : " + Type);
         }
 
+        public static void ResetValue()
+        {
+            NameVar = null;
+            Type = VariableType.Input;
+        }
+
     }
 }

@@ -24,7 +24,7 @@ namespace ExpertSystem.View
         public static int Min { get; private set; }
         public static int Max { get; private set; }
 
-        public ObservableCollection<Term> TermsList = new ObservableCollection<Term>();// { get; private set; }
+        public static ObservableCollection<Term> TermsList = new ObservableCollection<Term>();// { get; private set; }
         
         public MBD_DefinitionView()
         {
@@ -80,13 +80,14 @@ namespace ExpertSystem.View
         {
             try
             {
-                Min = System.Convert.ToInt32(textBox_minVarValue);
-                Max = System.Convert.ToInt32(textBox_maxVarValue);
+                Min = System.Convert.ToInt32(textBox_minVarValue.Text);
+                Max = System.Convert.ToInt32(textBox_maxVarValue.Text);
             }
             catch (Exception) { MessageBox.Show("Input validate border data!"); return; }
 
             this.Close();
 
+            new CommentorVariableWindowView().ShowDialog();
             
         }
 
@@ -97,6 +98,12 @@ namespace ExpertSystem.View
             {
                 TermsList.RemoveAt(index);
             }
+        }
+
+        public static void ResetValue()
+        {
+            Min = Max = 0;
+            TermsList = null;
         }
     }
 }
