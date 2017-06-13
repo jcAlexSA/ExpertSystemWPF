@@ -39,7 +39,7 @@ namespace ExpertSystem.View
             variable.Type = CreateVariableView.Type;
             variable.Min = MBD_DefinitionView.Min;
             variable.Max = MBD_DefinitionView.Max;
-            variable.TermsList = MBD_DefinitionView.TermsList.ToList();
+            variable.TermsList = MBD_DefinitionView.TermsList == null ? null : MBD_DefinitionView.TermsList.ToList();
             variable.Comment = Comment;
 
             MainWindowView.VariableCollection.Add(variable);
@@ -73,8 +73,7 @@ namespace ExpertSystem.View
             TextBlock textBlock = new TextBlock();
             textBlock.Name = variable.Name;
             textBlock.Text = variable.Name;
-            textBlock.Background = Brushes.DarkGray;
-            
+            textBlock.Background = Brushes.DarkGray;           
             
         }
     }

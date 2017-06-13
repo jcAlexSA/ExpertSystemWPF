@@ -52,7 +52,7 @@
             </MenuItem>
             <MenuItem Header="Edit">
                 <MenuItem Click="OnCreateNewVariableClick" Header="New Variable" />
-                <MenuItem Header="New Rule Block" />
+                <MenuItem Click="OnCreateRuleBlockClick" Header="New Rule Block" />
                 <MenuItem Header="New Text" />
             </MenuItem>
             <MenuItem Header="View" />
@@ -72,12 +72,10 @@
             Background="#F8F8FF"
             MouseRightButtonDown="canvas_drawing_MouseRightButtonDown">
 
-
-
             <Canvas.ContextMenu>
-                <ContextMenu>
+                <ContextMenu ItemsSource="{Binding ElementName=canvas_drawing}">
                     <MenuItem Click="OnCreateNewVariableClick" Header="Add Variable" />
-                    <MenuItem Header="Add Rule Block" />
+                    <MenuItem Click="OnCreateRuleBlockClick" Header="Add Rule Block" />
                     <MenuItem Header="Add Text" />
 
                 </ContextMenu>

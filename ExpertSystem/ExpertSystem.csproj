@@ -57,8 +57,8 @@
     <Compile Include="Model\FuzzyVariable.cs" />
     <Compile Include="Model\Term.cs" />
     <Compile Include="Model\TriangleFunction.cs" />
-    <Compile Include="RuleBlockWizard.xaml.cs">
-      <DependentUpon>RuleBlockWizard.xaml</DependentUpon>
+    <Compile Include="View\RuleBlockWizardView.xaml.cs">
+      <DependentUpon>RuleBlockWizardView.xaml</DependentUpon>
     </Compile>
     <Compile Include="RuleBlockWizardDefineOperators.xaml.cs">
       <DependentUpon>RuleBlockWizardDefineOperators.xaml</DependentUpon>
@@ -99,7 +99,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RuleBlockWizard.xaml">
+    <Page Include="View\RuleBlockWizardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

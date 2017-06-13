@@ -62,7 +62,6 @@ D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\View\CommentorVariableWi
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\View\CreateVariableView.baml
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\View\MainWindowView.baml
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\View\MBD_DefinitionView.baml
-D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\RuleBlockWizard.baml
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\RuleBlockWizardDefineOperators.baml
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\SpreadsheetRuleEditor.baml
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\VariableEditor.baml
@@ -70,7 +69,6 @@ D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\View\CommentorVariableWi
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\View\CreateVariableView.g.cs
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\View\MainWindowView.g.cs
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\View\MBD_DefinitionView.g.cs
-D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\RuleBlockWizard.g.cs
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\RuleBlockWizardDefineOperators.g.cs
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\SpreadsheetRuleEditor.g.cs
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\VariableEditor.g.cs
@@ -81,3 +79,5 @@ D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\ExpertSystem.Properties.
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\ExpertSystem.csproj.GenerateResource.Cache
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\bin\Debug\ExpertSystem.exe
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\bin\Debug\ExpertSystem.pdb
+D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\View\RuleBlockWizardView.baml
+D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\View\RuleBlockWizardView.g.cs
