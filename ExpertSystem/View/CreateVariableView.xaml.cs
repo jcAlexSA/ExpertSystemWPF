@@ -30,19 +30,34 @@ namespace ExpertSystem.View
 
         private void OnCancelBtnClick(object sender, RoutedEventArgs e)
         {
-            //reset values and close window
-            NameVar = null;
-            Type = VariableType.Input;
+            ResetValue();
             this.Close();
         }
 
         private void OnNextBtnClick(object sender, RoutedEventArgs e)
         {
             NameVar = textBox_NameVar.Text;
-            if (string.IsNullOrEmpty(NameVar)) return;
+            if (string.IsNullOrEmpty(NameVar))
+            {
+                MessageBox.Show("Input Name Of Variable In Field!");
+                return;
+            }
+
+            if (IsExistThisNameInList(NameVar))
+            {
+                MessageBox.Show("Such Name Already Exist!");
+                return;
+            }
 
             this.Close();
             (new MBD_DefinitionView()).ShowDialog();
+        }
+
+        private bool IsExistThisNameInList(string NameVar)
+        {
+            foreach (var item in MainWindowView.VariableCollection)
+                if (item.Name == NameVar) return true;
+            return false;
         }
 
         private void OnRadioBtnTypeChecked(object sender, RoutedEventArgs e)

@@ -54,5 +54,18 @@ namespace ExpertSystem.Model
 
         public FuzzyVariable() { }
 
+
+        public FuzzyVariable(string name,
+            VariableType type, float min, float max, 
+            List<Term> termList, string comment)
+        {
+            this._name = name;
+            this._type = type;
+            this._min = min;
+            this._max = max;
+            this._termsList = termList;
+            this._comment = comment;
+        }
+
     }
 }

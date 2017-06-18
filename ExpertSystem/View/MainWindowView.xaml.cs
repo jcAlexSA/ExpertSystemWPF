@@ -70,22 +70,25 @@ namespace ExpertSystem.View
         {
             //TODO LISTENING ON DELETING CHANGING AND ANDDING ELEMENT !!!!!!!!!
             TextBlock textBlock = new TextBlock();
-            textBlock.Name = "name";
-            textBlock.Text = "txt";
+
+            FuzzyVariable tempList = (sender as ObservableCollection<FuzzyVariable>).ToArray().Last();
+            
+            textBlock.Name = "textBlock_" + tempList.Name;
+            textBlock.Text = tempList.Name;
             textBlock.Width = 60;
             textBlock.AllowDrop = true;
             textBlock.MouseLeftButtonDown += textBlock_MouseLeftButtonDown;
 
             textBlock.ContextMenu = GetContextMenuOfElement();
 
-            if (/*type == input*/ true)
+            if (VariableType.Input == tempList.Type)
                 textBlock.Background = Brushes.Gainsboro;
-            else if (/*type == output*/ false)
-                textBlock.Background = Brushes.Lavender;
+            else if (VariableType.Output == tempList.Type)
+                textBlock.Background = Brushes.LightSalmon;
             else //intermediate
                 return;
 
-            SetElementOnCanvas(textBlock, LastMouseClick.X, LastMouseClick.Y);
+            SetElementOnCanvas(textBlock, LastMouseClick.X, LastMouseClick.Y);            
         }
 
         void textBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

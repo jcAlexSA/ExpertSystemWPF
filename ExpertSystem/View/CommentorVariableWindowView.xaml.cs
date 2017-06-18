@@ -34,18 +34,13 @@ namespace ExpertSystem.View
                 Comment = textBox_CommentVar.Text;
             }
 
-            FuzzyVariable variable = new FuzzyVariable();
-            variable.Name = CreateVariableView.NameVar;
-            variable.Type = CreateVariableView.Type;
-            variable.Min = MBD_DefinitionView.Min;
-            variable.Max = MBD_DefinitionView.Max;
-            variable.TermsList = MBD_DefinitionView.TermsList == null ? null : MBD_DefinitionView.TermsList.ToList();
-            variable.Comment = Comment;
+            FuzzyVariable variable = new FuzzyVariable(CreateVariableView.NameVar,
+                CreateVariableView.Type, MBD_DefinitionView.Min, MBD_DefinitionView.Max,
+                MBD_DefinitionView.TermsList == null ? null : MBD_DefinitionView.TermsList.ToList(), 
+                CommentorVariableWindowView.Comment);
 
             MainWindowView.VariableCollection.Add(variable);
-
-            GenerateTextBlockVariable(variable);
-
+            
             ResetAllValues();
             this.Close();
         }
@@ -68,13 +63,5 @@ namespace ExpertSystem.View
             CommentorVariableWindowView.ResetValue();
         }
 
-        private void GenerateTextBlockVariable(FuzzyVariable variable)
-        {
-            TextBlock textBlock = new TextBlock();
-            textBlock.Name = variable.Name;
-            textBlock.Text = variable.Name;
-            textBlock.Background = Brushes.DarkGray;           
-            
-        }
     }
 }

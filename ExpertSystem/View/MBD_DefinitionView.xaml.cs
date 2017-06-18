@@ -105,5 +105,12 @@ namespace ExpertSystem.View
             Min = Max = 0;
             TermsList = null;
         }
+
+        private void OnCloseBtnClick(object sender, RoutedEventArgs e)
+        {
+            CreateVariableView.ResetValue();
+            ResetValue();
+            Close();
+        }
     }
 }
