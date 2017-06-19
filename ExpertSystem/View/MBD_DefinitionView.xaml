@@ -125,14 +125,29 @@
 
         </GroupBox>
 
-        <ListBox Name="ListBoxTerms" Height="80">
+        <ListView Name="ListViewTerms" Height="80">
+
 
             <ListBox.ContextMenu>
                 <ContextMenu>
                     <MenuItem Click="OnDeleteTermBtnClick" Header="Delete term" />
                 </ContextMenu>
             </ListBox.ContextMenu>
-        </ListBox>
+
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Width="150"
+                        DisplayMemberBinding="{Binding Name}"
+                        Header="Name" />
+                    <GridViewColumn
+                        Width="165"
+                        DisplayMemberBinding="{Binding Function.Name}"
+                        Header="Function" />
+                </GridView>
+            </ListView.View>
+
+        </ListView>
 
 
         <Grid Margin="1">

@@ -27,7 +27,7 @@ namespace ExpertSystem.View
         public MainWindowView()
         {
             InitializeComponent();
-
+            
             VariableCollection.CollectionChanged += VariableCollectionChanged;
         }
 
@@ -78,6 +78,7 @@ namespace ExpertSystem.View
             textBlock.Width = 60;
             textBlock.AllowDrop = true;
             textBlock.MouseLeftButtonDown += textBlock_MouseLeftButtonDown;
+            
 
             textBlock.ContextMenu = GetContextMenuOfElement();
 

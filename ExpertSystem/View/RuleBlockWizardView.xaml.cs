@@ -19,9 +19,22 @@ namespace ExpertSystem.View
     /// </summary>
     public partial class RuleBlockWizardView : Window
     {
+        public static string Name { get; set; }
+
         public RuleBlockWizardView()
         {
             InitializeComponent();
+
+            listBox_common_var.ItemsSource = MainWindowView.VariableCollection;
+        }
+
+        private void OnInputBtnClick(object sender, RoutedEventArgs e)
+        {
+            List<int> selectedItems = new List<int>();
+            foreach (int item in listBox_common_var.SelectedItems)
+                selectedItems.Add(listBox_common_var.Items.IndexOf(item));
+
+            
         }
     }
 }

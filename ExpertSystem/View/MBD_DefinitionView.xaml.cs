@@ -31,11 +31,11 @@ namespace ExpertSystem.View
             InitializeComponent();
 
             //reset values
-            TermsList = null;
+          //  TermsList = null;
 
             Min = Max = 0;
 
-            ListBoxTerms.ItemsSource = TermsList;
+            ListViewTerms.ItemsSource = TermsList;
         }
 
         private void OnAddTermBtnClick(object sender, RoutedEventArgs e)
@@ -64,7 +64,7 @@ namespace ExpertSystem.View
             if (TermsList == null)
             {
                 TermsList = new ObservableCollection<Term>();
-                ListBoxTerms.ItemsSource = TermsList;
+                //ListViewTerms.ItemsSource = TermsList;
             }
             TermsList.Add(new Term(nameTerm, function));
 
@@ -93,7 +93,7 @@ namespace ExpertSystem.View
 
         private void OnDeleteTermBtnClick(object sender, RoutedEventArgs e)
         {
-            int index = ListBoxTerms.SelectedIndex;
+            int index = ListViewTerms.SelectedIndex;
             if (index >= 0 && index < TermsList.Count)
             {
                 TermsList.RemoveAt(index);

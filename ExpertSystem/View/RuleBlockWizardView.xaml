@@ -45,9 +45,17 @@
                     Background="#E0EEEE"
                     Text="Variables: " />
                 <ListBox
+                    Name="listBox_common_var"
                     Height="75"
                     Margin="5"
-                    Background="#F5F5F5" />
+                    Background="#F5F5F5"
+                    SelectionMode="Multiple">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=Name}" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </StackPanel>
 
             <Grid Grid.Column="1">
@@ -60,6 +68,7 @@
                 <Button
                     Grid.Row="0"
                     Margin="10"
+                    Click="OnInputBtnClick"
                     Content="Input" />
                 <Button
                     Grid.Row="1"
