@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\App.xaml
-8-1225257202
+9-1010438578
 
-20-1056664196
+21-1503681060
 12-114506869
-View\CommentorVariableWindowView.xaml;View\CreateVariableView.xaml;View\MainWindowView.xaml;View\MBD_DefinitionView.xaml;View\RuleBlockWizardView.xaml;RuleBlockWizardDefineOperators.xaml;SpreadsheetRuleEditor.xaml;VariableEditor.xaml;
+VariableEditorResult.xaml;View\CommentorVariableWindowView.xaml;View\CreateVariableView.xaml;View\MainWindowView.xaml;View\MBD_DefinitionView.xaml;View\RuleBlockWizardView.xaml;RuleBlockWizardDefineOperators.xaml;SpreadsheetRuleEditor.xaml;VariableEditor.xaml;
 
 False
 

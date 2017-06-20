@@ -80,3 +80,4 @@ D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\ExpertSystem.Properties.
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\ExpertSystem.csproj.GenerateResource.Cache
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\ExpertSystem.exe
 D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\ExpertSystem.pdb
+D:\Univer\Diplom\ExpertSystemWPF\ExpertSystem\obj\Debug\ExpertSystem.csprojResolveAssemblyReference.cache
