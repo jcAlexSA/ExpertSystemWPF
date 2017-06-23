@@ -75,7 +75,8 @@
                             Content="Triangle"
                             IsEnabled="True"
                             IsSelected="True" />
-                        <ComboBoxItem Content="Gauss" IsEnabled="False" />
+                        <ComboBoxItem Content="Gauss" />
+                        <ComboBoxItem Content="Quadratic" />
                     </ComboBox>
 
                 </StackPanel>

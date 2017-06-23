@@ -46,16 +46,16 @@
                     ToolTip="(Ctrl+S)" />
                 <MenuItem Width="Auto" Header="Close" />
             </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Click="OnCreateNewVariableClick" Header="New Variable" />
+                <MenuItem Click="OnCreateRuleBlockClick" Header="New Rule Block" />
+                <MenuItem Header="New Text" />
+            </MenuItem>
             <MenuItem Header="Tools">
                 <MenuItem Header="Print to code on C++" />
                 <MenuItem Header="Print to code on C#" />
                 <MenuItem Header="Print to code on Java" />
                 <MenuItem Header="Print to code on PHP" />
-            </MenuItem>
-            <MenuItem Header="Edit">
-                <MenuItem Click="OnCreateNewVariableClick" Header="New Variable" />
-                <MenuItem Click="OnCreateRuleBlockClick" Header="New Rule Block" />
-                <MenuItem Header="New Text" />
             </MenuItem>
             <MenuItem Header="View" />
             <MenuItem Header="Window" />
@@ -97,7 +97,17 @@
             Margin="5"
             HorizontalAlignment="Stretch"
             VerticalAlignment="Stretch"
-            Background="WhiteSmoke" />
+            Background="WhiteSmoke">
+
+            <TreeViewItem Header="Variables">
+                <TreeViewItem Header="Input" />
+                <TreeViewItem Header="Output" />
+                <TreeViewItem Header="Intermediate" />
+            </TreeViewItem>
+            <TreeViewItem Header="Rule Blocks" />
+
+        </TreeView>
+
 
 
     </Grid>

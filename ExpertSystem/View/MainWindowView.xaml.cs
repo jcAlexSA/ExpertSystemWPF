@@ -118,13 +118,5 @@ namespace ExpertSystem.View
         {
             canvas_drawing.Children.Remove(elementToDelete);
         }
-
-
-
-
-        
-
-        
-
     }
 }

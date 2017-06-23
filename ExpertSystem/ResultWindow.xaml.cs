@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace ExpertSystem
 {
     /// <summary>
-    /// Interaction logic for VariableEditor.xaml
+    /// Interaction logic for ResultWindow.xaml
     /// </summary>
-    public partial class VariableEditor : Window
+    public partial class ResultWindow : Window
     {
-        public VariableEditor()
+        public ResultWindow()
         {
             InitializeComponent();
         }

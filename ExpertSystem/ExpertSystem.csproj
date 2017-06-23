@@ -58,6 +58,9 @@
     <Compile Include="Model\RuleBlock.cs" />
     <Compile Include="Model\Term.cs" />
     <Compile Include="Model\TriangleFunction.cs" />
+    <Compile Include="ResultWindow.xaml.cs">
+      <DependentUpon>ResultWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\RuleBlockWizardView.xaml.cs">
       <DependentUpon>RuleBlockWizardView.xaml</DependentUpon>
     </Compile>
@@ -70,6 +73,10 @@
     <Compile Include="VariableEditor.xaml.cs">
       <DependentUpon>VariableEditor.xaml</DependentUpon>
     </Compile>
+    <Page Include="ResultWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\CommentorVariableWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
