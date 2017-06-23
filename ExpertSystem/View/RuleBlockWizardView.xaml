@@ -23,6 +23,7 @@
                 Background="#E0EEEE"
                 Text="Rule Block Name: " />
             <TextBox
+                Name="textBox_name"
                 Width="336"
                 Margin="2,2,10,3"
                 Padding="3"
@@ -78,6 +79,7 @@
                 <Button
                     Grid.Row="2"
                     Margin="10"
+                    Click="OnRemoveBtnClick"
                     Content="Remove" />
             </Grid>
             <StackPanel Grid.Column="2">
@@ -135,10 +137,12 @@
             <Button
                 Grid.Column="1"
                 Margin="15,5"
+                Click="OnNextBtnClick"
                 Content="Next" />
             <Button
                 Grid.Column="2"
                 Margin="15,5"
+                Click="OnCloseBtnClick"
                 Content="Cancel" />
         </Grid>
 

@@ -21,6 +21,7 @@ namespace ExpertSystem.View
     public partial class MainWindowView : Window
     {
         public static ObservableCollection<FuzzyVariable> VariableCollection = new ObservableCollection<FuzzyVariable>();
+        public static ObservableCollection<RuleBlock> RuleBlocksCollection = new ObservableCollection<RuleBlock>();
 
         public static Point LastMouseClick {get; private set;}
 
@@ -29,6 +30,7 @@ namespace ExpertSystem.View
             InitializeComponent();
             
             VariableCollection.CollectionChanged += VariableCollectionChanged;
+            RuleBlocksCollection.CollectionChanged += RuleBlocksCollectionChanged; 
         }
 
         private void OnCreateNewVariableClick(object sender, RoutedEventArgs e)
@@ -69,27 +71,50 @@ namespace ExpertSystem.View
         private void VariableCollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
         {
             //TODO LISTENING ON DELETING CHANGING AND ANDDING ELEMENT !!!!!!!!!
+            var tempList = (sender as ObservableCollection<FuzzyVariable>);
+
+            if (tempList == null || tempList.Count == 0) return;
+
+            FuzzyVariable fuzzyVariable = tempList.ToList().Last();
+            
+            TextBlock textBlock = CreateTextBlockVariable(fuzzyVariable.Name, fuzzyVariable.Type);
+
+            if(textBlock != null)
+                SetElementOnCanvas(textBlock, LastMouseClick.X, LastMouseClick.Y);            
+        }
+        
+        private void RuleBlocksCollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            var tempList = (sender as ObservableCollection<RuleBlock>);
+
+            if (tempList == null || tempList.Count == 0) return;
+
+            RuleBlock ruleBlock = tempList.ToList().Last();
+
+            
+        }
+
+        private TextBlock CreateTextBlockVariable(string name, VariableType type)
+        {
             TextBlock textBlock = new TextBlock();
 
-            FuzzyVariable tempList = (sender as ObservableCollection<FuzzyVariable>).ToArray().Last();
-            
-            textBlock.Name = "textBlock_" + tempList.Name;
-            textBlock.Text = tempList.Name;
+            textBlock.Name = "textBlock_" + name;
+            textBlock.Text = name;
             textBlock.Width = 60;
             textBlock.AllowDrop = true;
             textBlock.MouseLeftButtonDown += textBlock_MouseLeftButtonDown;
-            
+
 
             textBlock.ContextMenu = GetContextMenuOfElement();
 
-            if (VariableType.Input == tempList.Type)
+            if (VariableType.Input == type)
                 textBlock.Background = Brushes.Gainsboro;
-            else if (VariableType.Output == tempList.Type)
+            else if (VariableType.Output == type)
                 textBlock.Background = Brushes.LightSalmon;
             else //intermediate
-                return;
+                return null;
 
-            SetElementOnCanvas(textBlock, LastMouseClick.X, LastMouseClick.Y);            
+            return textBlock;
         }
 
         void textBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -117,6 +142,13 @@ namespace ExpertSystem.View
         private void DeleteElementFromCanvas(UIElement elementToDelete)
         {
             canvas_drawing.Children.Remove(elementToDelete);
+        }
+
+        private void OnCreateTextBlockClick(object sender, RoutedEventArgs e)
+        {
+            (new SpreadsheetRuleEditor()).Show();
+            (new ResultWindow()).Show();
+            (new VariableEditor()).Show();
         }
     }
 }

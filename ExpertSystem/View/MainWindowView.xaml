@@ -78,7 +78,7 @@
                 <ContextMenu ItemsSource="{Binding ElementName=canvas_drawing}">
                     <MenuItem Click="OnCreateNewVariableClick" Header="Add Variable" />
                     <MenuItem Click="OnCreateRuleBlockClick" Header="Add Rule Block" />
-                    <MenuItem Header="Add Text" />
+                    <MenuItem Click="OnCreateTextBlockClick" Header="Add Text" />
 
                 </ContextMenu>
             </Canvas.ContextMenu>
